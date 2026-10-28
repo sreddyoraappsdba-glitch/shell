@@ -2,10 +2,10 @@
   hosts: local
   connection: local
   vars:
-    name: "sudheer"
+    peru: "sudheer"
     city: "bangalore"
     age: "40"
   tasks:
   - name: print the vars
     debug:
-      msg: " I am {{ name }}, i live in {{ bangalore }}, my age is {{ age }}"
+      msg: " I am {{ peru }}, i live in {{ bangalore }}, my age is {{ age }}"
