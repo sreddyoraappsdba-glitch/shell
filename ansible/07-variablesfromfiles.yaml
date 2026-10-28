@@ -1,7 +1,7 @@
 - name: variables from files
   hosts: local
   connection: local
-  var_files:
+  vars_files:
   - peru.yaml
   tasks:
   - name: print variables from files
