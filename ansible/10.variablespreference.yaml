@@ -1,0 +1,17 @@
+- name: variables preference
+  hosts: local
+  connection: local
+  vars:
+    city: hyderabad
+  vars_prompt:
+  - name: city
+    prompt: please enter your city name
+    private: false
+  vars_files:
+  - peru.yaml
+  tasks:
+  - name: print variables
+    vars:
+      city: mumbai
+    debug:
+      msg: " i live in {{ city }}"
