@@ -1,0 +1,16 @@
+- name: print variables task level
+  hosts: local
+  connection: local
+  vars:
+    peru: "sudheer"
+  tasks:
+  - name: print variables
+    debug:
+      msg: " my name is now {{ peru }}"
+
+
+  - name: print variables again
+    vars:
+      peru: "sudheer reddy"
+    debug:
+      msg: "my name is now {{ peru }}"
