@@ -1,0 +1,12 @@
+- name: demo on loops
+  hosts: local
+  connetion: local
+  tasks:
+  - name: print number names
+    debug:
+      msg: " this is demo on loops {{ item }}" # item is reserved key word
+    loop:
+    - one 
+    - two 
+    - three 
+    - rose
