@@ -1,0 +1,15 @@
+- name: practice conditions
+  hosts: local
+  connection: local
+  vars:
+    given_number: 11
+  tasks:
+  - name: even 
+    debug:
+      msg: "Given number {{ given_number }} is even"
+    when: given_number % 2 == 0 # expression
+
+  - name: odd 
+    debug:
+      msg: "Given number {{ given_number }} is odd"
+    when: given_number % 2 != 0 # expression
